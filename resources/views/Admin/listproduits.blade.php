@@ -8,7 +8,7 @@
     <div class="container-fluid">
         <div class="row page-titles">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item active"><a>AFFICHER LES PRODUITS</a></li>
+                <li class="breadcrumb-item active"><a>PROJETS</a></li>
             </ol>
         </div>
         <div class="row">
@@ -16,7 +16,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Produits en vente</h4>
+                        <h4 class="card-title">Tous nos projets</h4>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -24,11 +24,11 @@
                                 <thead>
                                     <tr>
                                         <th><strong>Images</strong></th>
-                                        <th><strong>Nom du produit</strong></th>
+                                        <th><strong>Titre du projet</strong></th>
                                         <th><strong>Catégorie</strong></th>
                                         <th><strong>Description</strong></th>
                                         <th><strong>Date</strong></th>
-                                        <th><strong>Prix</strong></th>
+                                        <th><strong>Lieu</strong></th>
                                         <th><strong>Action</strong></th>
                                     </tr>
                                 </thead>
@@ -73,7 +73,7 @@
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-													<h5 class="modal-title" id="modalLabel{{ $commerce->id }}">Modifier Produit</h5>
+													<h5 class="modal-title" id="modalLabel{{ $commerce->id }}">Modifier Projet</h5>
 													<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="font-size: 1.2rem; color: #fff; background-color: #dc3545; border: none; width: 60px; height: 30px; display: flex; align-items: center; justify-content: center; padding: 0; cursor: pointer;">
 														<span aria-hidden="true">&times;</span>
 													</button>
@@ -83,7 +83,7 @@
                                                         @csrf
                                                         @method('PUT')
                                                         <div class="form-group">
-                                                            <label for="nom_produit{{ $commerce->id }}">Nom du Produit</label>
+                                                            <label for="nom_produit{{ $commerce->id }}">Titre du Projet</label>
                                                             <input type="text" class="form-control" id="nom_produit{{ $commerce->id }}" name="nom_produit" value="{{ $commerce->nom_produit }}">
                                                         </div>
                                                         <div class="form-group">
@@ -102,7 +102,7 @@
                                                             <textarea class="form-control" id="descript_produit{{ $commerce->id }}" name="descript_produit">{{ $commerce->descript_produit }}</textarea>
                                                         </div>
                                                         <div class="form-group" style="margin-bottom:20px;">
-                                                            <label for="prix_produit{{ $commerce->id }}">Prix</label>
+                                                            <label for="prix_produit{{ $commerce->id }}">Lieu</label>
                                                             <input type="text" class="form-control" id="prix_produit{{ $commerce->id }}" name="prix_produit" value="{{ $commerce->prix_produit }}">
                                                         </div>
                                                         <div class="form-group" style="margin-bottom:20px;">

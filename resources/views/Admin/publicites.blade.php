@@ -30,7 +30,6 @@
 											</div>
 											<form action="{{route('CREER-PUBLICITE')}}" method="POST" enctype="multipart/form-data">
 												@csrf
-												@method('post')
 												<div class="modal-body">
 													<input type="file" name="image">
 												</div>
@@ -45,14 +44,27 @@
 							<!-- Modal end-->
 							</div>
 							<div class="card-body pb-1">
-							@foreach ($publicite as $publicite)
-								<div id="lightgallery" class="row">
-									<a href="{{asset('/articlesImages/'.$publicite->image) }}" data-exthumbimage="{{asset('/articlesImages/'.$publicite->image) }}" data-src="{{asset('/articlesImages/'.$publicite->image) }}" class="col-lg-3 col-md-6 mb-4">
-										<img src="{{asset('/articlesImages/'.$publicite->image) }}" alt="" style="width:100%;"/>
-									</a>
-								</div>
-							</div>
-							@endforeach
+                                <div id="lightgallery" class="row">
+                                    @foreach ($publicite as $publicite)
+                                        <div class="col-lg-3 col-md-6 mb-4" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; height: 280px; overflow: hidden; position: relative;">
+                                            <a href="{{ asset('/articlesImages/'.$publicite->image) }}" data-exthumbimage="{{ asset('/articlesImages/'.$publicite->image) }}" data-src="{{ asset('/articlesImages/'.$publicite->image) }}">
+                                                <img src="{{ asset('/articlesImages/'.$publicite->image) }}" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                                            </a>
+                                            <!-- Icône de suppression -->
+                                            <div class="remove">
+                                                <button class="btn btn-sm btn-danger btn-xs sharp" onclick="confirmDelete('{{ $publicite->id }}')" style="position: absolute; top: 10px; right: 10px; background: rgba(255, 0, 0, 0.7); color: white; border: none; border-radius: 50%; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; cursor: pointer;">
+                                                    <i class="fa fa-trash"></i>
+                                                </button>
+                                                <form id="form-{{ $publicite->id }}" action="{{route('SUPP-PUBLICITE', $publicite->id) }}" method="post">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                </form>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+
+                            </div>
                         </div>
                         <!-- /# card -->
                     </div>
@@ -62,9 +74,39 @@
         <!--**********************************
             Content body end
         ***********************************-->
+<!-- Include Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @endsection
 
 @section('scripts')
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Initialiser LightGallery sur le conteneur avec l'ID 'lightgallery'
+        lightGallery(document.getElementById('lightgallery'), {
+            selector: 'a' // Sélectionne les liens <a> comme déclencheurs pour la galerie
+        });
+    });
+
+    // Fonction de confirmation de suppression
+    function confirmDelete(publiciteId) {
+        Swal.fire({
+            title: 'Êtes-vous sûr?',
+            text: 'Cette action est irréversible!',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Oui, supprimer!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Si l'utilisateur confirme, soumettre le formulaire de suppression
+                document.getElementById('form-' + publiciteId).submit();
+            }
+        });
+    }
+</script>
 @if(Session::has('success'))
 <script>
     toastr.success("{{ Session::get('success') }}", "Succès", {

@@ -18,72 +18,74 @@ class CommerceController extends Controller
         $tailles = Taille::all();
         $couleurs = Couleur::all();
         return view('Admin.vendre', compact('categories','tailles','couleurs'));
-    } 
+    }
 
     // Page de formulaire de vente
     public function voir_produits() {
-      $categories = Categorie::all();
-      $tailles = Taille::all();
-      $couleurs = Couleur::all();
-      
-      if (Auth::user()->role === 'ADMIN') {
-          // Si l'utilisateur a le rôle "ADMIN", afficher tous les produits
-          $commerce = Commerce::with('categorie','taille','couleur')->get();
-      } else {
-          // Sinon, afficher uniquement les produits de l'utilisateur connecté
-          $commerce = Commerce::with('categorie','taille','couleur')->where('user_id', Auth::user()->id)->get();
-      }
-  
-      return view('Admin.listproduits', compact('commerce', 'categories','tailles','couleurs'));
+        $categories = Categorie::all();
+        // $tailles = Taille::all();
+        // $couleurs = Couleur::all();
+
+        if (Auth::user()->role === 'ADMIN') {
+            // Si l'utilisateur a le rôle "ADMIN", afficher tous les produits
+            $commerce = Commerce::with('categorie')->get();
+        } else {
+            // Sinon, afficher uniquement les produits de l'utilisateur connecté
+            $commerce = Commerce::with('categorie')->where('user_id', Auth::user()->id)->get();
+        }
+
+        return view('Admin.listproduits', compact('commerce', 'categories'));
     }
 
 
     // Créer un produit
     public function store_vente(Request $request)
     {
-      $this->validate($request, [
-          'nom_produit' => 'required|string|max:255',
-          'prix_produit' => 'required|string',
-          'descript_produit' => 'required|string',
-          'idCategorie' => 'required|exists:categories,id',
-          'idTaille' => 'required|exists:tailles,id',
-          'idCouleur' => 'required|exists:couleurs,id',
-          'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-      ]);
+        $this->validate($request, [
+            'nom_produit' => 'required|string|max:255',
+            'prix_produit' => 'required|string',
+            'descript_produit' => 'required|string|max:65535', // Longueur max pour un champ TEXT
+            'idCategorie' => 'required|exists:categories,id',
+            'idTaille' => 'nullable|string',
+            'idCouleur' => 'nullable|string',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:5120', // 5 Mo
+        ]);
 
-      $commerce = new Commerce();
-      $commerce->nom_produit = $request->input('nom_produit');
-      $commerce->prix_produit = $request->input('prix_produit');
-      $commerce->descript_produit = $request->input('descript_produit');
-      $commerce->idCategorie = $request->input('idCategorie');
-      $commerce->idTaille = $request->input('idTaille');
-      $commerce->idCouleur = $request->input('idCouleur');
-      $commerce->user_id = Auth::user()->id;
+        $commerce = new Commerce();
+        $commerce->nom_produit = $request->input('nom_produit');
+        $commerce->prix_produit = $request->input('prix_produit');
+        $commerce->descript_produit = $request->input('descript_produit');
+        $commerce->idCategorie = $request->input('idCategorie');
+        $commerce->idTaille = $request->input('idTaille');
+        $commerce->idCouleur = $request->input('idCouleur');
+        $commerce->user_id = Auth::user()->id;
 
-      if ($request->hasFile('image')) {
-          $file_image = $request->file('image');
-          $file_name_image = time() . '_' . $file_image->getClientOriginalName();
-          $file_image->move(public_path('articlesImages'), $file_name_image);
-          $commerce->image = $file_name_image;
-      }
+        if ($request->hasFile('image')) {
+            $file_image = $request->file('image');
+            $file_name_image = time() . '_' . $file_image->getClientOriginalName();
+            $file_image->move(public_path('articlesImages'), $file_name_image);
+            $commerce->image = $file_name_image;
+        }
 
-      $commerce->save();
-      return back()->with('success', 'Produit ajouté avec succès.');
+        $commerce->save();
+
+        return back()->with('success', 'Produit ajouté avec succès.');
     }
+
 
 
     // Supprimer un Produit
     public function delete_produit($id)
     {
-      $commerce = Commerce::find($id);
-      if (!$commerce) {
-        return back()->with('error', 'Le produit n\'existe pas.');
-      }
-      if ($commerce->image) {
-        Storage::delete('public/articlesImages/' . $commerce->image);
-      }
-      $commerce->delete();
-      return back()->with("success", "Produit supprime");
+        $commerce = Commerce::find($id);
+        if (!$commerce) {
+            return back()->with('error', 'Le produit n\'existe pas.');
+        }
+        if ($commerce->image) {
+            Storage::delete('public/articlesImages/' . $commerce->image);
+        }
+        $commerce->delete();
+        return back()->with("success", "Produit supprime");
     }
 
 

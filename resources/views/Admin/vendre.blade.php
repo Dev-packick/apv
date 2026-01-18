@@ -8,7 +8,7 @@
         <div class="container-fluid">
             <div class="row page-titles">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item active"><a href="javascript:void(0)">VENDRE</a></li>
+                    <li class="breadcrumb-item active"><a href="javascript:void(0)">PUBLIER</a></li>
                 </ol>
             </div>
             <!-- row -->
@@ -16,7 +16,7 @@
                 <div class="col-xl-12 col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Remplissez le formulaire de vente</h4>
+                            <h4 class="card-title">Renseigner le formulaire</h4>
                         </div>
                         <div class="card-body">
                             <div class="basic-form">
@@ -25,15 +25,15 @@
                                     @method('POST')
                                     <div class="row">
                                         <div class="mb-3 col-md-6">
-                                            <label class="form-label">Nom du produit</label>
-                                            <input type="text" class="form-control" name="nom_produit" id="nom_produit" placeholder="Saisissez le nom du produit" required>
+                                            <label class="form-label">Titre du projet</label>
+                                            <input type="text" class="form-control" name="nom_produit" id="nom_produit" placeholder="Saisissez le titre du projet" required>
                                         </div>
                                         <div class="mb-3 col-md-6">
-                                            <label class="form-label">Prix</label>
-                                            <input type="text" class="form-control" name="prix_produit" id="prix_produit" placeholder="Saisissez le prix du produit" required>
+                                            <label class="form-label">Lieu</label>
+                                            <input type="text" class="form-control" name="prix_produit" id="prix_produit" placeholder="Saisissez le lieu" required>
                                         </div>
                                     </div>
-                                    <div class="row">
+                                    <!-- <div class="row">
                                         <div class="mb-3 col-md-6">
                                             <label class="form-label">Couleur</label>
                                             <select name="idCouleur" id="couleur" multiple class="form-control">
@@ -52,9 +52,9 @@
                                             </select>
                                             <div class="error"></div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="mb-3">
-                                        <label class="form-label">Description du produit</label>
+                                        <label class="form-label">Description</label>
                                         <textarea class="form-control" rows="4" name="descript_produit" id="descript_produit" placeholder="Détails précis du produit" required></textarea>
                                     </div>
                                     <div class="row">

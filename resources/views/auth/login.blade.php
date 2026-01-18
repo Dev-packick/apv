@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="fr" class="h-100">
-
 <head>
-    <meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="keywords" content=""/>
-	<meta name="author" content=""/>
-	<meta name="robots" content=""/>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="eshop Hotel Admin Dashboard"/>
-	<meta property="og:title" content="eshop Hotel Admin Dashboard"/>
-	<meta property="og:description" content="eshop Hotel Admin Dashboard"/>
-	<meta property="og:image" content="social-image.png"/>
-	<meta name="format-detection" content="telephone=no">
-	<!-- PAGE TITLE HERE -->
-	<title>KAKUDAA - Connexion</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="title" content="Amis De La Planète Vivable">
+	<meta name="description" content="l’association les amis de la planète vivable (APV) est une communauté de jeunes dédiés à la lutte contre les problèmes environnementaux qui menacent notre planète.">
+	<meta content="keywords" name="association, environnement, biodiversité, changement climatique, pollution, protection de l'environnement, jeunes engagés, APV, Amis de la Planète Vivable">
+	<meta name="language" content="French">
+	<meta name="robots" content="index, follow">
+	<meta name="msapplication-TileImage" content="client/assets/img/LG_ASS.png">
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+    <!-- PAGE TITLE HERE -->
+    <title>APV - connexion</title>
+
 	<!-- FAVICONS ICON -->
-	<link rel="shortcut icon" type="image/png" href="admin/assets/images/favicon.png"/>
+    <link rel="apple-touch-icon" href="client/assets/img/LGA.jpg"/>
+	<link rel="icon" href="client/assets/img/LGA.jpg" sizes="32x32"/>
+	<link rel="icon" href="client/assets/img/LGA.jpg" sizes="192x192"/>
+    <link rel="canonical" href="https://www.amisdelaplanetevivables.com/apv">
+    <link rel="shortcut icon" type="image/png" href="client/assets/img/LGA.jpg"/>
 	<link href="admin/assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
 	<link href="admin/assets/vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
     <link href="admin/assets/vendor/datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
     <link href="admin/assets/css/style.css" rel="stylesheet">
 </head>
-
 <body class="vh-100">
-    <div class="authincation h-100" style="font-family: Arial, sans-serif; background-color: #ffd482;">
+    <div class="authincation h-100" style="font-family: Arial, sans-serif; background-color: #0E3500;">
         <div class="container h-100">
             <div class="row justify-content-center h-100 align-items-center">
                 <div class="col-md-6">
@@ -47,11 +47,10 @@
                                 </div>
                                     <div class="text-center mb-3 d-flex justify-content-center align-items-center">
                                         <a href="{{route('TABLEAU')}}" class="d-flex align-items-center" style="text-transform: uppercase; font-weight: bold; color: black; font-size: 24px;">
-                                            <img src="admin/assets/images/logo.png" alt="Logo" style="height: 40px; margin-right: 10px;">
-                                            KAKUDAA
+                                            <img src="admin/assets/images/LG_ASS.png" alt="Logo" style="height: 80px; margin-right: 10px;">
                                         </a>
                                     </div>
-                                    <h4 class="text-center mb-4">Connexion à mon compte</h4>
+                                    <h3 class="text-center mb-4">CONNEXION</h3>
                                     <form action="{{route('AUTHLOGIN')}}" method="post" class="form-valide-with-icon needs-validation" novalidate>
                                         @method('POST')
                                         @csrf
@@ -91,14 +90,14 @@
                                             </div> -->
                                         </div>
                                         <div style="text-center">
-                                            <button class="btn-block" type="submit" style="background-color: #5cb85c; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">
+                                            <button class="btn-block" type="submit" style="background-color: #0E3500; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">
                                                 Se connecter
                                             </button>
                                         </div>
                                     </form>
-                                    <div class="new-account mt-3">
-                                        <p class="mb-0 mb-sm-3">Vous n'avez pas de compte? <a class="text-primary" href="{{ route('page-register') }}">S'inscrire maintenant</a></p>
-                                    </div>
+                                    <!--<div class="new-account mt-3">-->
+                                    <!--    <p class="mb-0 mb-sm-3">Vous n'avez pas de compte? <a class="text-primary" href="{{ route('page-register') }}">S'inscrire maintenant</a></p>-->
+                                    <!--</div>-->
                                 </div>
                             </div>
                         </div>
@@ -142,5 +141,4 @@
 		})()
 	</script>
 </body>
-
 </html>

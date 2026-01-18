@@ -7,7 +7,7 @@
     <div class="container-fluid">
         <div class="row page-titles">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item active"><a>Listes des vendeurs</a></li>
+                <li class="breadcrumb-item active"><a>MEMBRES DE L'ASSOCIATION</a></li>
             </ol>
         </div>
         <!-- row -->
@@ -16,7 +16,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">E-vendeurs</h4>
+                        <h4 class="card-title">Tous les membres</h4>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -41,7 +41,7 @@
                                         </td>
                                         <td><a href="javascript:void(0);">{{ $user->telephone }}</a></td>
                                         <td><a href="javascript:void(0);">{{ $user->email }}</a></td>
-                                        <td>{{ $user->created_at->format('d-m-Y') }}</td>
+                                        <td>{{ $user->created_at->translatedFormat('d F Y')}}</td>
                                         <td>
                                             <div class="remove">
                                                 <button class="btn btn-sm btn-danger btn-xs sharp" onclick="confirmDelete('{{ $user->id }}')">

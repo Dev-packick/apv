@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Storage;
 
 class AuthController extends Controller
 {
-    
+
     // Page de connexion
     public function connexion(request $request)
     {
@@ -26,7 +26,7 @@ class AuthController extends Controller
     {
         return view('auth.register');
     }
-    
+
 
     /*S'INSCRIRE*/
     public function create_account(request $request)
@@ -37,7 +37,7 @@ class AuthController extends Controller
             'telephone' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6|max:12',
-            'role' => 'required|in:ADMIN,VENDEUR,USER', // validation pour le rôle
+            'role' => 'required|in:ADMIN,MEMBRE,BENEVOLE,PARTENAIRE,DONATEUR,USER', // validation pour le rôle
         ]);
         /*SI LE FORMULAIRE EST VALIDE, ENREGISTRER UN NOUVEL UTILISATEUR*/
         $user = new User();
@@ -99,8 +99,8 @@ class AuthController extends Controller
 
     //LISTES VENDEURS
     public function voir_vendeurs(){
-        $users = User::where('role', 'VENDEUR')->get();
-        // $users  = user::all();
+        // $users = User::where('role', 'MEMBRE')->get();
+        $users  = user::all();
         return view('Admin.vendeurs', compact('users'));
     }
 
@@ -117,7 +117,7 @@ class AuthController extends Controller
         $user = User::find($id);
 
         // Vérifier si l'utilisateur existe et s'il est un vendeur
-        if (!$user || $user->role !== 'VENDEUR') {
+        if (!$user || $user->role !== 'MEMBRE') {
             return back()->with('error', 'Le vendeur n\'existe pas.');
         }
 

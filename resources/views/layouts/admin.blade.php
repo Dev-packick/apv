@@ -13,9 +13,9 @@
 	<meta property="og:image" content="social-image.png"/>
 	<meta name="format-detection" content="telephone=no">
 	<!-- PAGE TITLE HERE -->
-	<title>KAKUDAA - Admin</title>
+	<title>APV - Admin</title>
 	<!-- FAVICONS ICON -->
-	<link href="admin/assets/images/favicon_B.png" rel="shortcut icon" type="image/png"/>
+	<link href="admin/assets/images/LGA.png" rel="shortcut icon" type="image/png"/>
 	<link href="admin/assets/vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
 	<link href="admin/assets/vendor/dotted-map/css/contrib/jquery.smallipop-0.3.0.min.css" type="text/css" media="all" rel="stylesheet"/>
 	<link href="admin/assets/vendor/owl-carousel/owl.carousel.css" rel="stylesheet">
@@ -30,7 +30,10 @@
 	<link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@3.0.1/dist/css/multi-select-tag.css">
-
+    <!-- Lightgallery CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/lightgallery.js@1.9.0/dist/css/lightgallery-bundle.min.css" rel="stylesheet">
+    <!-- Lightgallery JS -->
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery.js@1.9.0/dist/lightgallery.min.js"></script>
 </head>
 
 <body>
@@ -57,18 +60,7 @@
         ***********************************-->
         <div class="nav-header">
 			<a href="{{route('TABLEAU')}}" class="brand-logo">
-				<svg class="logo-abbr" width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<rect width="57" height="57" rx="14" fill="#FFD482"/>
-					<path class="logo-k" d="M33.8661 45.3198L34.016 45.5H34.2504H42H43.0867L42.3797 44.6747L29.6972 29.8694L42.0311 15.3234L42.7292 14.5H41.6497H34.2504H34.015L33.8651 14.6814L23.6296 27.0631V15V14.5H23.1296H17H16.5V15V45V45.5H17H23.1296H23.6296V45V33.016L33.8661 45.3198Z" fill="#2D3134" stroke="#2D3134"/>
-					<path d="M49.609 37.1129L49.6065 37.1153L45.8935 40.7348L46.7704 45.847L46.7705 45.8478C46.8764 46.468 46.622 47.0949 46.113 47.4658L49.609 37.1129ZM49.609 37.1129C50.0552 36.6749 50.222 36.0196 50.0254 35.4164L49.0746 35.7263L50.0254 35.4164C49.8302 34.8175 49.3123 34.3807 48.6885 34.2897L48.6878 34.2896L43.5562 33.5445L41.2613 28.8938C41.2613 28.8938 41.2612 28.8938 41.2612 28.8938C40.9426 28.248 40.2969 28 39.7756 28C39.2543 28 38.6085 28.248 38.2899 28.8938L35.995 33.5445L30.8633 34.2896L30.8626 34.2897C30.2377 34.3808 29.721 34.8192 29.526 35.4156C29.3292 36.0177 29.4952 36.6758 29.9435 37.1142L29.9447 37.1154L33.6583 40.7342L32.7814 45.8463L32.7813 45.8471M49.609 37.1129L32.7813 45.8471M32.7813 45.8471C32.6755 46.4673 32.9299 47.0942 33.4388 47.4652M32.7813 45.8471L33.4388 47.4652M33.4388 47.4652C33.9498 47.8383 34.6282 47.8867 35.1863 47.5918C35.1868 47.5915 35.1873 47.5913 35.1878 47.591L39.7756 45.1795L44.3657 47.5925L33.4385 47.4649C33.4386 47.465 33.4387 47.4651 33.4388 47.4652ZM45.1374 47.7835C45.4783 47.7835 45.822 47.6782 46.1129 47.4659L44.3668 47.5931C44.6093 47.7208 44.8745 47.7835 45.1374 47.7835Z" fill="url(#paint0_linear_33_278)" stroke="#FFD482" stroke-width="2"/>
-					<defs>
-						<linearGradient id="paint0_linear_33_278" x1="39.7756" y1="29" x2="39.7756" y2="46.7835" gradientUnits="userSpaceOnUse">
-							<stop offset="2" stop-color="#FF9D43"/>
-							<stop offset="1" stop-color="#F66F4D"/>
-						</linearGradient>
-					</defs>
-				</svg>
-				<img class="brand-title" src="admin/assets/images/KKD_N.png" width="110" height="33" viewBox="0 0 110 33" fill="none" alt="">
+				<img class="brand-title" src="admin/assets/images/LGA.png" width="50" height="50" viewBox="0 0 110 33" fill="none" alt="">
             </a>
             <div class="nav-control">
                 <div class="hamburger">
@@ -79,125 +71,8 @@
         <!--**********************************
             Nav header end
         ***********************************-->
-		
-		<!--**********************************
-            Chat box start
-        ***********************************-->
-		<div class="chatbox">
-			<div class="chatbox-close"></div>
-			<div class="custom-tab-1">
-				<ul class="nav nav-tabs">
-					<li class="nav-item">
-						<a class="nav-link active" data-bs-toggle="tab" href="#chat">Messagerie</a>
-					</li>
-				</ul>
-				<div class="tab-content">
-					<div class="tab-pane fade active show" id="chat" role="tabpanel">
-						<div class="card mb-sm-3 mb-md-0 contacts_card dz-chat-user-box">
-							<div class="card-header chat-list-header text-center">
-								<a href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect fill="#000000" x="4" y="11" width="16" height="2" rx="1"/><rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) " x="4" y="11" width="16" height="2" rx="1"/></g></svg></a>
-								<div>
-									<h6 class="mb-1">Liste Messages</h6>
-									<p class="mb-0">Tout voir</p>
-								</div>
-								<a href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"/><circle fill="#000000" cx="5" cy="12" r="2"/><circle fill="#000000" cx="12" cy="12" r="2"/><circle fill="#000000" cx="19" cy="12" r="2"/></g></svg></a>
-							</div>
-							<div class="card-body contacts_body p-0 dz-scroll  " id="DZ_W_Contacts_Body">
-								<ul class="contacts">
-									<li class="name-first-letter">A</li>
-									<li class="active dz-chat-user">
-										<div class="d-flex bd-highlight">
-											<div class="img_cont">
-												<img src="admin/assets/images/avatar/1.jpg" class="rounded-circle user_img" alt=""/>
-												<span class="online_icon"></span>
-											</div>
-											<div class="user_info">
-												<span>Archie Parker</span>
-												<p>Kalid est en ligne</p>
-											</div>
-										</div>
-									</li>
-									<li class="dz-chat-user">
-										<div class="d-flex bd-highlight">
-											<div class="img_cont">
-												<img src="admin/assets/images/avatar/2.jpg" class="rounded-circle user_img" alt=""/>
-												<span class="online_icon offline"></span>
-											</div>
-											<div class="user_info">
-												<span>Alfie Mason</span>
-												<p>Taherah left 7 mins ago</p>
-											</div>
-										</div>
-									</li>
-									<li class="dz-chat-user">
-										<div class="d-flex bd-highlight">
-											<div class="img_cont">
-												<img src="admin/assets/images/avatar/3.jpg" class="rounded-circle user_img" alt=""/>
-												<span class="online_icon"></span>
-											</div>
-											<div class="user_info">
-												<span>AharlieKane</span>
-												<p>Sami est en ligne</p>
-											</div>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="card chat dz-chat-history-box d-none">
-							<div class="card-header chat-list-header text-center">
-								<a href="javascript:void(0);" class="dz-chat-history-back">
-									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon points="0 0 24 0 24 24 0 24"/><rect fill="#000000" opacity="0.3" transform="translate(15.000000, 12.000000) scale(-1, 1) rotate(-90.000000) translate(-15.000000, -12.000000) " x="14" y="7" width="2" height="10" rx="1"/><path d="M3.7071045,15.7071045 C3.3165802,16.0976288 2.68341522,16.0976288 2.29289093,15.7071045 C1.90236664,15.3165802 1.90236664,14.6834152 2.29289093,14.2928909 L8.29289093,8.29289093 C8.67146987,7.914312 9.28105631,7.90106637 9.67572234,8.26284357 L15.6757223,13.7628436 C16.0828413,14.136036 16.1103443,14.7686034 15.7371519,15.1757223 C15.3639594,15.5828413 14.7313921,15.6103443 14.3242731,15.2371519 L9.03007346,10.3841355 L3.7071045,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(9.000001, 11.999997) scale(-1, -1) rotate(90.000000) translate(-9.000001, -11.999997) "/></g></svg>
-								</a>
-								<div>
-									<h6 class="mb-1">Discussion avec Dona</h6>
-									<p class="mb-0 text-success">En ligne</p>
-								</div>							
-								<div class="dropdown">
-									<a href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"/><circle fill="#000000" cx="5" cy="12" r="2"/><circle fill="#000000" cx="12" cy="12" r="2"/><circle fill="#000000" cx="19" cy="12" r="2"/></g></svg></a>
-									<ul class="dropdown-menu dropdown-menu-start">
-										<li class="dropdown-item"><i class="fa fa-user-circle text-primary me-2"></i> Voir profil</li>
-										<li class="dropdown-item"><i class="fa fa-users text-primary me-2"></i> Ajouter un amis</li>
-									</ul>
-								</div>
-							</div>
-							<div class="card-body msg_card_body dz-scroll" id="DZ_W_Contacts_Body3">
-								<div class="d-flex justify-content-start mb-4">
-									<div class="img_cont_msg">
-										<img src="admin/assets/images/avatar/1.jpg" class="rounded-circle user_img_msg" alt=""/>
-									</div>
-									<div class="msg_cotainer">
-										Hi, how are you samim?
-										<span class="msg_time">8:40 AM, Today</span>
-									</div>
-								</div>
-								<div class="d-flex justify-content-end mb-4">
-									<div class="msg_cotainer_send">
-										Hi Khalid i am good tnx how about you?
-										<span class="msg_time_send">8:55 AM, Today</span>
-									</div>
-									<div class="img_cont_msg">
-								<img src="admin/assets/images/avatar/2.jpg" class="rounded-circle user_img_msg" alt=""/>
-									</div>
-								</div>
-							</div>
-							<div class="card-footer type_msg">
-								<div class="input-group">
-									<textarea class="form-control overflow-hidden" placeholder="Ecrivez votre message..."></textarea>
-									<div class="input-group-append">
-										<button type="button" class="btn btn-primary"><i class="fa fa-location-arrow"></i></button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--**********************************
-            Chat box End
-        ***********************************-->
-		
+
+
 		<!--**********************************
             Header start
         ***********************************-->
@@ -219,46 +94,6 @@
 									</svg>
                                     <span class="badge light text-white bg-primary rounded-circle"></span>
                                 </a>
-                                <div class="dropdown-menu dropdown-menu-end">
-                                    <div id="DZ_W_Notification1" class="widget-media dz-scroll p-3" style="height:380px;">
-										<ul class="timeline">
-											<li>
-												<div class="timeline-panel">
-													<div class="media me-2 media-info">
-														CT
-													</div>
-													<div class="media-body">
-														<h6 class="mb-1">un client à commander</h6>
-														<small class="d-block">01 janvier 2024</small>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="timeline-panel">
-													<div class="media me-2 media-info">
-														CT
-													</div>
-													<div class="media-body">
-														<h6 class="mb-1">un client à commander</h6>
-														<small class="d-block">01 janvier 2024</small>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="timeline-panel">
-													<div class="media me-2 media-info">
-														CT
-													</div>
-													<div class="media-body">
-														<h6 class="mb-1">un client à commander</h6>
-														<small class="d-block">01 janvier 2024</small>
-													</div>
-												</div>
-											</li>
-										</ul>
-									</div>
-                                    <a class="all-notification" href="javascript:void(0);">voir toutes les notification<i class="ti-arrow-end"></i></a>
-                                </div>
                             </li>
 							<li class="nav-item dropdown notification_dropdown">
                                 <a class="nav-link bell-link nav-action " href="javascript:void(0);">
@@ -280,7 +115,7 @@
 									<input class="form-control" type="text" readonly />
 								</div>
                             </li>
-                        </ul>                    
+                        </ul>
 					</div>
 				</nav>
 			</div>
@@ -298,7 +133,7 @@
 					<a class="nav-link header-profile2 position-relative" href="javascript:void(0);"  role="button" data-bs-toggle="dropdown">
 						<div class="header-content">
 							<h2 class="font-w500">Bienvenue {{Session::get('UserName')}}</h2>
-							<span class="font-w400">Les clients n'attendent que vous. Devenez le meilleur vendeur sur Kakudaa!</span>
+							<span class="font-w400">Nous les amis de la planète vivable souhaitons la bienvenue a tous les membres!</span>
 						</div>
 					</a>
 				</div>
@@ -311,34 +146,43 @@
 						</a>
                     </li>
 					<li>
-						<a href="{{route('VOIR-PRODUITS')}}" aria-expanded="false">
-						<i class="flaticon-022-copy"></i>
-							<span class="nav-text">Gestion des produits</span>
+						<a href="{{route('VOIR-MESSAGE')}}" aria-expanded="false">
+							<i class="fas fa-comments"></i>
+							<span class="nav-text">Messages</span>
 						</a>
                     </li>
 					<li>
+						<a class="has-arrow" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-022-copy"></i>
+							<span class="nav-text">Gestion des projets</span>
+						</a>
+						<ul aria-expanded="false">
+							<li><a href="{{route('AJOUTER-PRODUIT')}}">partager un projet</a></li>
+							<li><a href="{{route('VOIR-PRODUITS')}}">voir nos projets</a></li>
+						</ul>
+                    </li>
+                    <li>
+                        <a href="{{ route('VOIR-DOCUMENTS') }}" aria-expanded="false">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span class="nav-text">Gestion documents</span>
+                        </a>
+                    </li>
+					<li>
 						<a href="{{route('VOIR-VENDEURS')}}" aria-expanded="false">
-							<i class="flaticon-381-user-9"></i>
-							<span class="nav-text">Gestion des vendeurs</span>
+							<i class="flaticon-381-user-7"></i>
+							<span class="nav-text">Gestion des membres</span>
+						</a>
+                    </li>
+					<li>
+						<a href="{{route('SHOWNEWSLETTER')}}" aria-expanded="false">
+							<i class="fas fa-mail-bulk"></i>
+							<span class="nav-text">Newsletters</span>
 						</a>
                     </li>
 					<li>
 						<a href="{{route('VOIR-CATEGORIE')}}" aria-expanded="false">
 							<i class="flaticon-381-tab"></i>
-							
-							<span class="nav-text">Catégories de produits</span>
-						</a>
-                    </li>
-					<li>
-						<a href="{{route('VOIR-TAILLE')}}" aria-expanded="false">
-							<i class="fas fa-expand-arrows-alt"></i>
-							<span class="nav-text">Tailles de produits</span>
-						</a>
-                    </li>
-					<li>
-						<a href="{{route('VOIR-COULEUR')}}" aria-expanded="false">
-							<i class="fas fa-paint-brush"></i>
-							<span class="nav-text">Couleurs de produits</span>
+							<span class="nav-text">Catégories de projets</span>
 						</a>
                     </li>
 					<li>
@@ -347,33 +191,12 @@
 							<span class="nav-text">Publicités</span>
 						</a>
                     </li>
-					<!-- <li>
-						<a href="{{route('COMMANDES')}}" aria-expanded="false">
-							<i class="flaticon-381-newspaper"></i>
-							<span class="nav-text">Commandes reçus</span>
-						</a>
-                    </li> -->
-					<!-- <li>
-						<a href="{{route('FACTURE')}}" aria-expanded="false">
-							<i class="flaticon-072-printer"></i>
-							<span class="nav-text">Reçu de paiement</span>
-						</a>
-                    </li> -->
 					<li>
 						<a href="{{route('PROFIL')}}" aria-expanded="false">
 							<i class="flaticon-381-user-9"></i>
 							<span class="nav-text">Profil</span>
 						</a>
                     </li>
-                    <!-- <li>
-						<a class="has-arrow" href="javascript:void()" aria-expanded="false">
-							<i class="flaticon-022-copy"></i>
-							<span class="nav-text">Pages</span>
-						</a>
-                        <ul aria-expanded="false">
-							<li><a href="{{route('FORGOT')}}">Mot de passe oublié</a></li>
-						</ul>
-                    </li> -->
 					<li>
 						<a href="{{route('LOGOUT')}}" aria-expanded="false">
 							<i class="ti-power-off"></i>
@@ -390,28 +213,19 @@
 					<li>
 						<a class="has-arrow" href="javascript:void()" aria-expanded="false">
 							<i class="flaticon-022-copy"></i>
-							<span class="nav-text">Gestion des produits</span>
+							<span class="nav-text">Gestion des projets</span>
 						</a>
 						<ul aria-expanded="false">
-							<li><a href="{{route('AJOUTER-PRODUIT')}}">vendre un produit</a></li>
-							<li><a href="{{route('VOIR-PRODUITS')}}">voir mes produits</a></li>
+							<li><a href="{{route('AJOUTER-PRODUIT')}}">partager un projet</a></li>
+							<li><a href="{{route('VOIR-PRODUITS')}}">voir nos projets</a></li>
 						</ul>
                     </li>
 					<li>
 						<a href="{{route('PROFIL')}}" aria-expanded="false">
-							<i class="flaticon-381-user-9"></i>
+							<i class="flaticon-381-user-7"></i>
 							<span class="nav-text">Profil</span>
 						</a>
                     </li>
-                    <!-- <li>
-						<a class="has-arrow" href="javascript:void()" aria-expanded="false">
-							<i class="flaticon-022-copy"></i>
-							<span class="nav-text">Pages</span>
-						</a>
-                        <ul aria-expanded="false">
-							<li><a href="{{route('FORGOT')}}">Mot de passe oublié</a></li>
-						</ul>
-                    </li> -->
 					<li>
 						<a href="{{route('LOGOUT')}}" aria-expanded="false">
 							<i class="ti-power-off"></i>
@@ -479,6 +293,10 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<!-- input choix multiple -->
 	<script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@3.0.1/dist/js/multi-select-tag.js"></script>
+    <!-- JS for dotted map -->
+	<script src="admin/assets/vendor/dotted-map/js/contrib/jquery.smallipop-0.3.0.min.js"></script>
+    <script src="admin/assets/vendor/dotted-map/js/contrib/suntimes.js"></script>
+    <script src="admin/assets/vendor/dotted-map/js/contrib/color-0.4.1.js"></script>
 	<script>
     	new MultiSelectTag('taille')  // id
 	</script>
@@ -488,8 +306,8 @@
 	<!-- input choix multiple End-->
 	<script>
 		$(function () {
-			  $("#datepicker").datepicker({ 
-					autoclose: true, 
+			  $("#datepicker").datepicker({
+					autoclose: true,
 					todayHighlight: true
 			  }).datepicker('update', new Date());
 		});

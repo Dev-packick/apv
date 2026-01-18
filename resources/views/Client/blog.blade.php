@@ -1,161 +1,145 @@
 @extends('layouts.client')
 @section('content')
-		
-		<!-- Breadcrumbs -->
-		<div class="breadcrumbs">
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<div class="bread-inner">
-							<ul class="bread-list">
-								<li><a href="index1.html">Accueil<i class="ti-arrow-right"></i></a></li>
-								<li class="active"><a>Blog</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- End Breadcrumbs -->
-			
-		<!-- Start Blog Single -->
-		<section class="blog-single section">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-12">
-						<div class="blog-single-main">
-							<div class="row">
-								<div class="col-12">
-									<div class="image">
-										<img src="https://via.placeholder.com/950x460" alt="#">
-									</div>
-									<div class="blog-detail">
-										<h2 class="blog-title">Titre de l'article</h2>
-										<div class="blog-meta">
-											<span class="author"><a href="#"><i class="fa fa-user"></i>eshop</a><a href="#"><i class="fa fa-calendar"></i>01/01/2024</a><a href="#"><i class="fa fa-comments"></i>Commentaires</a></span>
-										</div>
-										<div class="content">
-											<blockquote> <i class="fa fa-quote-left"></i> Do what you love to do and give it your very best. Whether it's business or baseball, or the theater, or any field. If you don't love what you're doing and you can't give it your best, get out of it. Life is too short. You'll be an old man before you know it. risus. Ut tincidunt, erat eget feugiat eleifend, eros magna dapibus diam.</blockquote>
-										</div>
-									</div>
-								</div>
-								<div class="col-12">
-									<div class="comments">
-										<h3 class="comment-title">Commentaires</h3>
-										<!-- Single Comment -->
-										<div class="single-comment">
-											<img src="https://via.placeholder.com/80x80" alt="#">
-											<div class="content">
-												<h4>Alisa harm <span>01/01/2024</span></h4>
-												<p>Enthusiastically leverage existing premium quality vectors with enterprise-wide innovation collaboration Phosfluorescently leverage others enterprisee  Phosfluorescently leverage.</p>
-											</div>
-										</div>
-										<!-- End Single Comment -->
-									</div>									
-								</div>											
-								<div class="col-12">			
-									<div class="reply">
-										<div class="reply-head">
-											<h2 class="reply-title">Laisser un commentaire</h2>
-											<!-- Comment Form -->
-											<form class="form" action="#">
-												<div class="row">
-													<div class="col-lg-6 col-md-6 col-12">
-														<div class="form-group">
-															<label>Nom<span>*</span></label>
-															<input type="text" name="name" placeholder="" required="required">
-														</div>
-													</div>
-													<div class="col-lg-6 col-md-6 col-12">
-														<div class="form-group">
-															<label>Email<span>*</span></label>
-															<input type="email" name="email" placeholder="" required="required">
-														</div>
-													</div>
-													<div class="col-12">
-														<div class="form-group">
-															<label>Message<span>*</span></label>
-															<textarea name="message" placeholder=""></textarea>
-														</div>
-													</div>
-													<div class="col-12">
-														<div class="form-group button">
-															<button type="submit" class="btn">Publié</button>
-														</div>
-													</div>
-												</div>
-											</form>
-											<!-- End Comment Form -->
-										</div>
-									</div>			
-								</div>			
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-12">
-						<div class="main-sidebar">
-							<!-- Single Widget -->
-							<div class="single-widget recent-post">
-								<h3 class="title">Autres articles</h3>
-								<!-- Single Post -->
-								<div class="single-post">
-									<div class="image">
-										<img src="https://via.placeholder.com/100x100" alt="#">
-									</div>
-									<div class="content">
-										<h5><a href="#">Titre de l'article</a></h5>
-										<ul class="comment">
-											<li><i class="fa fa-calendar" aria-hidden="true"></i>01/01/2024</li>
-										</ul>
-									</div>
-								</div>
-								<!-- End Single Post -->
-								<!-- Single Post -->
-								<div class="single-post">
-									<div class="image">
-										<img src="https://via.placeholder.com/100x100" alt="#">
-									</div>
-									<div class="content">
-										<h5><a href="#">Titre de l'article</a></h5>
-										<ul class="comment">
-											<li><i class="fa fa-calendar" aria-hidden="true"></i>01/01/2024</li>
-										</ul>
-									</div>
-								</div>
-								<!-- End Single Post -->
-								<!-- Single Post -->
-								<div class="single-post">
-									<div class="image">
-										<img src="https://via.placeholder.com/100x100" alt="#">
-									</div>
-									<div class="content">
-										<h5><a href="#">Titre de l'article</a></h5>
-										<ul class="comment">
-											<li><i class="fa fa-calendar" aria-hidden="true"></i>01/01/2024</li>
-										</ul>
-									</div>
-								</div>
-								<!-- End Single Post -->
-							</div>
-							<!--/ End Single Widget -->
 
-							<!-- Single Widget -->
-							<div class="single-widget newsletter">
-								<h3 class="title">Newsletter</h3>
-								<div class="letter-inner">
-									<h4>Abonnez vous & recevez <br> nos dernières offres.</h4>
-									<div class="form-inner">
-										<input type="email" placeholder="Entrer votre email">
-										<a href="#">Enregistrer</a>
-									</div>
-								</div>
-							</div>
-							<!--/ End Single Widget -->
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!--/ End Blog Single -->
-			
+    <main id="content" class="site-main post-792 page type-page status-publish hentry">
+        <div class="page-content">
+			<div data-elementor-type="wp-post" data-elementor-id="518" class="elementor elementor-518" data-elementor-post-type="envato_tk_templates">
+                <section class="elementor-section elementor-top-section elementor-element elementor-element-517bea4 elementor-section-height-min-height elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="517bea4" data-element_type="section" data-settings='{"background_background":"classic"}' style="background-image: url(client/assets/img/img1.jpg);">
+                    <div class="elementor-background-overlay"></div>
+                    <div class="elementor-container elementor-column-gap-no">
+                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b3e1c17" data-id="b3e1c17" data-element_type="column" data-settings='{"background_background":"classic"}'>
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                <div class="elementor-element elementor-element-17b967e elementor-widget elementor-widget-heading" data-id="17b967e" data-element_type="widget" data-widget_type="heading.default">
+                                    <div class="elementor-widget-container">
+                                        <style>
+                                            .elementor-heading-title {
+                                                padding: 0;
+                                                margin: 0;
+                                                line-height: 1;
+                                            }
+                                            .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
+                                                color: inherit;
+                                                font-size: inherit;
+                                                line-height: inherit;
+                                            }
+                                            .elementor-widget-heading .elementor-heading-title.elementor-size-small {
+                                                font-size: 15px;
+                                            }
+                                            .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
+                                                font-size: 19px;
+                                            }
+                                            .elementor-widget-heading .elementor-heading-title.elementor-size-large {
+                                                font-size: 29px;
+                                            }
+                                            .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
+                                                font-size: 39px;
+                                            }
+                                            .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
+                                                font-size: 59px;
+                                            }
+                                        </style>
+                                        <h1 class="elementor-heading-title elementor-size-default">Documentation</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="elementor-section elementor-top-section elementor-element elementor-element-32b1fb9 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="32b1fb9" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-no">
+                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-087ad14" data-id="087ad14" data-element_type="column">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                <div class="elementor-element elementor-element-bf04570 elementor-hidden-phone elementor-widget elementor-widget-counter" data-id="bf04570" data-element_type="widget" data-widget_type="counter.default">
+                                    <div class="elementor-widget-container">
+                                        <style>/*! elementor - v3.21.0 - 08-05-2024 */
+                                            .elementor-counter{display:flex;justify-content:center;align-items:stretch;flex-direction:column-reverse}.elementor-counter .elementor-counter-number{flex-grow:var(--counter-number-grow,0)}.elementor-counter .elementor-counter-number-wrapper{flex:1;display:flex;font-size:69px;font-weight:600;line-height:1;text-align:center}.elementor-counter .elementor-counter-number-prefix{text-align:end;flex-grow:var(--counter-prefix-grow,1);white-space:pre-wrap}.elementor-counter .elementor-counter-number-suffix{text-align:start;flex-grow:var(--counter-suffix-grow,1);white-space:pre-wrap}.elementor-counter .elementor-counter-title{flex:1;display:flex;justify-content:center;align-items:center;margin:0;padding:0;font-size:19px;font-weight:400;line-height:2.5}
+                                        </style>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-4ac505e elementor-widget elementor-widget-heading" data-id="4ac505e" data-element_type="widget" data-widget_type="heading.default">
+                                    <div class="elementor-widget-container">
+                                        <h3 class="elementor-heading-title elementor-size-default" style="text-align: center; margin-top:70px;">Accédez à Nos Documents et ressources téléchargeable</h2>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-9438dfb elementor-widget elementor-widget-text-editor" data-id="9438dfb" data-element_type="widget" data-widget_type="text-editor.default">
+                                    <div class="elementor-widget-container">
+                                        <p style="text-align: center">Bienvenue dans notre espace de documents et ressources. Vous y trouverez des fichiers utiles. Naviguez, visualisez ou téléchargez les documents en toute simplicité.</p>
+                                    </div>
+                                </div>
+                                <section class="elementor-section elementor-top-section elementor-element elementor-element-ca08284 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ca08284" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                    <div class="elementor-container elementor-column-gap-no">
+                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6c94c40" data-id="6c94c40" data-element_type="column">
+                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                <!-- DEBUT SECTION DOCUMENTS -->
+                                                    <section class="elementor-section elementor-top-section elementor-element elementor-element-ca08284 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ca08284" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}" style="margin-top: -120px">
+                                                        <div class="elementor-container elementor-column-gap-no">
+                                                            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6c94c40" data-id="6c94c40" data-element_type="column">
+                                                                <div class="elementor-widget-wrap elementor-element-populated">
+                                                                    @foreach($documents->chunk(4) as $chunk)
+                                                                        <!-- Nouvelle section pour chaque groupe de 4 documents -->
+                                                                        <section class="elementor-section elementor-inner-section elementor-element elementor-section-boxed" style="margin-bottom: 30px;">
+                                                                            <div class="elementor-container" style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: space-between;">
+                                                                                @foreach($documents->chunk(4) as $chunk)
+                                                                                <section class="elementor-section elementor-inner-section elementor-element elementor-section-boxed" style="margin-bottom: 30px;">
+                                                                                    <div class="elementor-container" style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: space-between;">
+                                                                                        @foreach($chunk as $document)
+                                                                                            <div class="elementor-column" style="flex: 0 0 23%; box-sizing: border-box; text-align: center; padding: 15px; border: 1px solid #ddd; border-radius: 10px; background: #f9f9f9; display: flex; flex-direction: column; align-items: center; justify-content: space-between;">
+
+                                                                                                @php
+                                                                                                    $extension = pathinfo($document->file, PATHINFO_EXTENSION);
+                                                                                                    $fileUrl = asset('documentsFiles/' . $document->file);
+
+                                                                                                    $icon = match($extension) {
+                                                                                                        'pdf' => 'client/assets/img/pdficon.png',
+                                                                                                        'doc', 'docx' => 'client/assets/img/wordicon.png',
+                                                                                                        'ppt', 'pptx' => 'client/assets/img/powerpoint.png',
+                                                                                                        'xls', 'xlsx' => 'client/assets/img/excelicon.png',
+                                                                                                        default => 'client/assets/img/file2.jpeg',
+                                                                                                    };
+                                                                                                @endphp
+
+                                                                                                <div style="margin-bottom: 10px;">
+                                                                                                    <a href="{{ $fileUrl }}" target="_blank">
+                                                                                                        <img src="{{ asset($icon) }}" alt="Document" width="80" height="80">
+                                                                                                    </a>
+                                                                                                </div>
+
+                                                                                                <h6 style="margin: 10px 0; font-size: 14px; font-weight: bold; width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                                                                                                    <a href="{{ $fileUrl }}" target="_blank" style="text-decoration: none; color: #333;">
+                                                                                                        {{ $document->titre }}
+                                                                                                    </a>
+                                                                                                </h6>
+
+                                                                                                <div style="margin-top: auto;">
+                                                                                                    <a href="{{ $fileUrl }}" download="{{ $document->file }}"
+                                                                                                       style="display: inline-block; padding: 5px 15px; font-size: 12px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px;">
+                                                                                                        Télécharger
+                                                                                                    </a>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        @endforeach
+                                                                                    </div>
+                                                                                </section>
+                                                                                @endforeach
+                                                                            </div>
+                                                                        </section>
+                                                                    @endforeach
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                <!-- FIN SECTION DOCUMENTS -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="post-tags"></div>
+        </div>
+    </main>
+
 @endsection

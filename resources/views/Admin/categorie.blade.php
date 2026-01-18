@@ -8,7 +8,7 @@
             <div class="container-fluid">
 				<div class="row page-titles">
 					<ol class="breadcrumb">
-						<li class="breadcrumb-item active"><a>Catégories d'articles</a></li>
+						<li class="breadcrumb-item active"><a>Catégories de projets</a></li>
 					</ol>
                 </div>
                 <!-- row -->

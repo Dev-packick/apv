@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('nom_produit');
             $table->string('prix_produit');
-            $table->string('descript_produit');
+            $table->longText('descript_produit');
             $table->string('idCategorie');
-            $table->string('idCouleur');
-            $table->string('idTaille');
+            $table->string('idCouleur')->nullable(); // Champ nullable;
+            $table->string('idTaille')->nullable(); // Champ nullable;
             $table->string('image');
             $table->timestamps();
             $table->integer('user_id');
